@@ -21,7 +21,7 @@ const getUserById = async (req, res) => {
         }
     })
 
-    // let { token } = req.headers
+    // let { token } = req.heade rs
 
     // let dataUser = decodeToken(token)
 
