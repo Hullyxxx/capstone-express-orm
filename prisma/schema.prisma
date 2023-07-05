@@ -28,13 +28,13 @@ model hinh_anh {
   nguoi_dung_id Int?
   binh_luan     binh_luan[]
   nguoi_dung    nguoi_dung? @relation(fields: [nguoi_dung_id], references: [nguoi_dung_id], onDelete: NoAction, onUpdate: NoAction, map: "hinh_anh_ibfk_1")
-  luu_anh       luu_anh[] @ignore
+  luu_anh       luu_anh[]
 
   @@index([nguoi_dung_id], map: "nguoi_dung_id")
 }
 
-/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model luu_anh {
+  id            Int         @id @default(autoincrement())
   nguoi_dung_id Int?
   hinh_id       Int?
   ngay_luu      DateTime?   @db.Date
@@ -43,7 +43,6 @@ model luu_anh {
 
   @@index([hinh_id], map: "hinh_id")
   @@index([nguoi_dung_id], map: "nguoi_dung_id")
-  @@ignore
 }
 
 model nguoi_dung {
@@ -55,5 +54,5 @@ model nguoi_dung {
   anh_dai_dien  String      @db.VarChar(255)
   binh_luan     binh_luan[]
   hinh_anh      hinh_anh[]
-  luu_anh       luu_anh[] @ignore
+  luu_anh       luu_anh[]
 }
