@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "d7f597b2-7b81-4f99-a0ae-ffe221e31c3c",
+		"name": "Capstone Express ORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23262899"
+	},
+	"item": [
+		{
+			"name": "get-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/user/get-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"get-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjcsImVtYWlsIjoiaHVuZy53b25nQGV4YW1wbGUuY29tIiwibWF0X2toYXUiOiIkMmEkMDQkWGpWVmhMOTN6SnJpMjF4WVhUUmppT2lNcmc3T2QvajRtVTdlcXVhZktZcG90MFZpcjEyc2EiLCJob190ZW4iOiJBbGV4YW5kZXIgV29uZyIsInR1b2kiOjI4LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2V4YW1wbGUuY29tL2FsZXhhbmRlcl93b25nLmpwZyIsInBhc3Nfd29yZCI6IiJ9LCJpYXQiOjE2ODg1MjEzNDgsImV4cCI6MTY4ODUyMTk0OH0.ptpJAmAdOtTxCw7a8M_M1h-E6yLA_vH8_0vSYx7EMV4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjcsImVtYWlsIjoiaHVuZy53b25nQGV4YW1wbGUuY29tIiwibWF0X2toYXUiOiIkMmEkMDQkWGpWVmhMOTN6SnJpMjF4WVhUUmppT2lNcmc3T2QvajRtVTdlcXVhZktZcG90MFZpcjEyc2EiLCJob190ZW4iOiJBbGV4YW5kZXIgV29uZyIsInR1b2kiOjI4LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2V4YW1wbGUuY29tL2FsZXhhbmRlcl93b25nLmpwZyIsInBhc3Nfd29yZCI6IiJ9LCJpYXQiOjE2ODg1MjE1NjksImV4cCI6MTY4ODUyMjE2OX0._hxSyJS41oh5t0T_DuRxjbFODgYcqc6d4zb4Z9IxHoQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/image/get-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image-by-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/image/get-image-by-name?nameImage=1688439187098_logoAirBNB.png",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-image-by-name"
+					],
+					"query": [
+						{
+							"key": "nameImage",
+							"value": "1688439187098_logoAirBNB.png"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-info-img-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/image/get-info-img-detail/6",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-info-img-detail",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload-image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Admin/Downloads/logoAirBNB.png"
+						},
+						{
+							"key": "mo_ta",
+							"value": "Mô tả hình 1",
+							"type": "text"
+						},
+						{
+							"key": "nguoi_dung_id",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{domain}}/api/image/upload-image",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"upload-image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"hung.wong@example.com\",\r\n    \"mat_khau\": \"secu789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/user/sign-in",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"hung.wong@example.com\",\r\n  \"mat_khau\": \"secu789\",\r\n  \"ho_ten\": \"Alexander Wong\",\r\n  \"tuoi\": 28,\r\n  \"anh_dai_dien\": \"https://example.com/alexander_wong.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/user/create-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nguoi_dung_id\": 5,\r\n    \"hinh_id\": 6,\r\n    \"ngay_binh_luan\": null,\r\n    \"noi_dung\": \"Bình luận 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/comment/post-comment",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"comment",
+						"post-comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-comment-by-id-image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/comment/get-comment-by-id-image/6",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"comment",
+						"get-comment-by-id-image",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image-saved",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/image/get-image-saved/6",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-image-saved",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-image",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Im5ndW9pX2R1bmdfaWQiOjcsImVtYWlsIjoiaHVuZy53b25nQGV4YW1wbGUuY29tIiwibWF0X2toYXUiOiIkMmEkMDQkWGpWVmhMOTN6SnJpMjF4WVhUUmppT2lNcmc3T2QvajRtVTdlcXVhZktZcG90MFZpcjEyc2EiLCJob190ZW4iOiJBbGV4YW5kZXIgV29uZyIsInR1b2kiOjI4LCJhbmhfZGFpX2RpZW4iOiJodHRwczovL2V4YW1wbGUuY29tL2FsZXhhbmRlcl93b25nLmpwZyIsInBhc3Nfd29yZCI6IiJ9LCJpYXQiOjE2ODg1MjE1NjksImV4cCI6MTY4ODUyMjE2OX0._hxSyJS41oh5t0T_DuRxjbFODgYcqc6d4zb4Z9IxHoQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/image/delete-image/11",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"delete-image",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-user-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/user/get-user-by-id/5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"get-user-by-id",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update-info-user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nguoi_dung_id\": 5,\r\n    \"email\": \"phihung4112@gmail.com\",\r\n    \"mat_khau\": \"12345\",\r\n    \"ho_ten\": \"Hung nguyen\",\r\n    \"tuoi\": 23,\r\n    \"anh_dai_dien\": \"1234344.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/user/update-info-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"update-info-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image-by-user-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/image/get-image-by-user-id/5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-image-by-user-id",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-image-saved-by-user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/image/get-image-saved-by-user/5",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"image",
+						"get-image-saved-by-user",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:7789",
+			"type": "string"
+		}
+	]
+}
